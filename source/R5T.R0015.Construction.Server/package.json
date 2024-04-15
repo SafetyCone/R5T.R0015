@@ -1,0 +1,15 @@
+{
+  "name": "R5T.R0015.Construction.Server",
+  "version": "0.0.1",
+  "description": "Server for the R5T.R0015.Construction Blazor client.",
+  "main": "index.js",
+  "scripts": {
+    "tailwindcss": "npx tailwindcss -i ./source/css/tailwind.css -o ./wwwroot/css-out/tailwind.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "davidcoats",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "3.4.1"
+  }
+}
