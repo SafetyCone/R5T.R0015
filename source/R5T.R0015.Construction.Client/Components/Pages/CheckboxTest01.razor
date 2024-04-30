@@ -1,0 +1,47 @@
+
+<Container01>
+    <Card01>
+        <div class="p-4 rounded bg-blue-50">
+            <p>Checkbox Test</p>
+
+            <div class="pt-4 relative flex items-start">
+                <div class="flex h-6 items-center">
+                    <input id="comments" aria-describedby="comments-description" name="comments" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        @bind:event="oninput" @bind:get="@CheckboxValue" @bind:set="OnInput">
+                </div>
+                <div class="ml-3 text-sm leading-6">
+                    <label for="comments" class="font-medium text-gray-900">The Checkbox</label>
+                    <p id="comments-description" class="text-gray-500">Controllable both internally and externally.</p>
+                </div>
+            </div>
+            <div class="p-6">
+                <Button03 Text="Toggle Checkbox" OnClick=this.ToggleCheckbox_OnClick/>
+            </div>
+            <div class="p-6">
+                <p>Checkbox value: @this.CheckboxValue</p>
+            </div>
+        </div>
+    </Card01>
+</Container01>
+
+@code{
+    [Parameter]
+    public bool CheckboxValue { get; set; }
+
+    private void OnInput(bool value)
+    {
+        this.CheckboxValue = value;
+    }
+
+    public void ToggleCheckbox_OnClick()
+    {
+        this.CheckboxValue = !this.CheckboxValue;
+    }
+
+    /// <summary>
+    /// Documentation will not appear for this component in consumer Razor files unless there is some sort of documentation in the Razor markup.
+    /// Documentation for the component is in the code-behind file.
+    /// </summary>
+    [Parameter]
+    public string DummyDocumentationParameter { get; set; }
+}

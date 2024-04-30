@@ -12,7 +12,7 @@
       }
     },
     "https": {
-      "launchUrl": "",
+      "launchUrl": "CheckboxTest01",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

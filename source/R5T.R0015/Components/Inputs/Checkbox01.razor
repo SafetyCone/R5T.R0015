@@ -1,0 +1,29 @@
+
+<input type="checkbox" class="@this.CssClass"
+    @bind:event="oninput" @bind:get="@this.Value" @bind:set="this.OnInput">
+
+
+@code{
+    /// <summary>
+    /// The bindable value of the checkbox.
+    /// </summary>
+    [Parameter]
+    public bool Value { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> ValueChanged { get; set; }
+
+    /// <summary>
+    /// The CSS class of the checkbox.
+    /// </summary>
+    [Parameter]
+    public string CssClass { get; set; }
+
+
+    private async Task OnInput(bool value)
+    {
+        this.Value = value;
+
+        await this.ValueChanged.InvokeAsync(this.Value);
+    }
+}

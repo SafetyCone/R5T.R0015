@@ -1,0 +1,17 @@
+
+@inherits ButtonBase
+
+<button type="button"
+    disabled="@this.Disabled"
+    class="@this.CssClass"
+    @onclick=this.OnClick>
+    @this.ChildContent
+</button>
+
+@code{
+    /// <summary>
+    /// The CSS class value for the button element.
+    /// </summary>
+    [Parameter]
+    public string CssClass { get; set; }
+}

@@ -1,0 +1,35 @@
+
+<Container01>
+    <Card01>
+        <div class="p-4 rounded bg-blue-50">
+            <p>Checkbox Test</p>
+
+            <div class="pt-4 relative flex items-start">
+                <div class="flex h-6 items-center">
+                    <Checkbox01 CssClass="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        @bind-Value=@this.CheckboxValue />
+                </div>
+                <div class="ml-3 text-sm leading-6">
+                    <label for="comments" class="font-medium text-gray-900">The Checkbox</label>
+                    <p id="comments-description" class="text-gray-500">Controllable both internally and externally.</p>
+                </div>
+            </div>
+            <div class="p-6">
+                <Button03 Text="Toggle Checkbox" OnClick=this.ToggleCheckbox_OnClick/>
+            </div>
+            <div class="p-6">
+                <p>Checkbox value: @this.CheckboxValue</p>
+            </div>
+        </div>
+    </Card01>
+</Container01>
+
+@code{
+    [Parameter]
+    public bool CheckboxValue { get; set; }
+
+    public void ToggleCheckbox_OnClick()
+    {
+        this.CheckboxValue = !this.CheckboxValue;
+    }
+}

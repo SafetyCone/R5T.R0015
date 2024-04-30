@@ -1,11 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
-
+<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup Label="Main">
     <TargetFramework>net8.0</TargetFramework>
     <NoWarn>1573;1587;1591</NoWarn>
     <OutputType>Library</OutputType>
   </PropertyGroup>
-
   <PropertyGroup Label="Package">
     <Version>0.0.1</Version>
     <Authors>DCoats</Authors>
@@ -16,23 +14,16 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/SafetyCone/R5T.R0015</RepositoryUrl>
   </PropertyGroup>
-
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
-
   <ItemGroup Label="Package References">
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.1" />
   </ItemGroup>
-
   <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
-
   <ItemGroup>
-    <Content Update="tailwind.contentpaths.json">
-      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
-    </Content>
+    <ProjectReference Include="..\..\..\R5T.T0154\source\R5T.T0154\R5T.T0154.csproj" />
   </ItemGroup>
-
 </Project>

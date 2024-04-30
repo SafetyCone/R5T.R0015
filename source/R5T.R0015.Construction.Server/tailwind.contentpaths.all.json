@@ -1,5 +1,5 @@
 [
+  "./../../../R5T.R0013/source/R5T.R0013/Components/**/*.razor",
   "./../R5T.R0015.Construction.Client/Components/**/*.razor",
-  "./Components/**/*.razor",
-  "./../R5T.R0015/Components/**/*.razor"
+  "./Components/**/*.razor"
 ]
