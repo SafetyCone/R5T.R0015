@@ -24,6 +24,8 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\R5T.T0142\source\R5T.T0142\R5T.T0142.csproj" />
     <ProjectReference Include="..\..\..\R5T.T0154\source\R5T.T0154\R5T.T0154.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Y0007\source\R5T.Y0007\R5T.Y0007.csproj" />
   </ItemGroup>
 </Project>
